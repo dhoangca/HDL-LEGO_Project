@@ -99,5 +99,5 @@ Route::prefix('admin')->name('admin.')->group(function()
     
 });
 
-Route::get('shopcheckout', [ClientController::class, 'checkout'])->name('checkout');
+
 // end route back-end
