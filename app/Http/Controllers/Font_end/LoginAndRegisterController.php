@@ -18,15 +18,20 @@ class LoginAndRegisterController extends Controller
 
     public function postLogin(Request $request)
     {
-        $arr = ['uUsername' => $request->uUsername, 'uPassword' => $request->uPasswords];
-        dd('$arr');
-        if (Auth::attempt($arr)) 
+        $uUsername['info'] = $request->uUsername;
+        $uPassword = $request->uPassword;
+
+        $result = DB::table('users')->WHERE('uUsername', $uUsername)->get()->toArray();
+        
+        foreach ($result as $value) {
+            # code...
+        }
+
+        if ($value->uPassword == $uPassword) 
         {
-            return redirect()->route('clients.index')->with('message','thanh cong');
-        }else
-        {
-            // return redirect()->route('clients.login')->with('message','that bai');
-            dd('that bai');
+            return redirect()->route('clients.index', $uUsername)->with('message','thanh cong');
+        }else {
+            echo 'đăng nhập thất bại';
         }
 
         // if (Auth::attempt(['uUsername' => $request->uUsername, 'uPassword' => $request->uPassword])) 
