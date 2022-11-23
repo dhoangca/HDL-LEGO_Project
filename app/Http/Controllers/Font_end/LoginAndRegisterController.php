@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Font_end\LoginAndRegisterModel;
 // use Auth;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class LoginAndRegisterController extends Controller
 {
