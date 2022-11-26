@@ -39,11 +39,11 @@
                     <div class="navbar-nav mr-auto py-0">
                         <a href="{{route('clients.index')}}" class="nav-item nav-link">Home</a>
                         <a href="{{route('clients.shop')}}" class="nav-item nav-link">Shop</a>
-                        <a href="{{route('clients.shopdetail')}}" class="nav-item nav-link">Shop Detail</a>
+                        <a href="{{asset('client/contents/shopdetail/')}}" class="nav-item nav-link">Shop Detail</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="{{route('clients.shoppingcart')}}" class="dropdown-item active">Shopping Cart</a>
+                                <a href="{{asset('client/contents/shoppingcart/')}}" class="dropdown-item active">Shopping Cart</a>
                                 <a href="{{route('clients.checkout')}}" class="dropdown-item">Checkout</a>
                             </div>
                         </div>
