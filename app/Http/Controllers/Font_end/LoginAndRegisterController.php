@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Font_end;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Font_end\LoginAndRegisterModel;
-// use Auth;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use DB;
 
 class LoginAndRegisterController extends Controller
@@ -35,6 +35,17 @@ class LoginAndRegisterController extends Controller
             echo 'đăng nhập thất bại';
         }
 
+        // $arr = ['uUsername' => $request->uUsername, 'uPassword' => $request->uPassword];
+        // if (Auth::attempt($arr)) 
+        // {
+        //     dd('thanh cong');
+        //     return redirect()->route('clients.index')->with('message','thanh cong');
+        // }else
+        // {
+        //     return redirect()->route('clients.login')->with('message','that bai');
+        //     dd('that bai');
+        // }
+
         // if (Auth::attempt(['uUsername' => $request->uUsername, 'uPassword' => $request->uPassword])) 
         // {
         //     if (Auth::user()->role == 1) 
@@ -44,7 +55,7 @@ class LoginAndRegisterController extends Controller
         //     }
         //     else
         //     {
-        //         dd('thành công');
+        //         dd('thất bại');
         //         return view('Back_end.content.index');
         //     }
             
