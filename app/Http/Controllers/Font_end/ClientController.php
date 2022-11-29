@@ -4,22 +4,33 @@ namespace App\Http\Controllers\Font_end;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Font_end\ProductModel;
 
 class ClientController extends Controller
 {
     public function index()
     {
-        return view('Font_end.content.index');
+        $FeaturedRecent1 = ProductModel::WHERE('FeaturedRecent',1)->get();
+
+        $FeaturedRecent0 = ProductModel::WHERE('FeaturedRecent',0)->get();
+
+        return view('Font_end.content.index', compact('FeaturedRecent1','FeaturedRecent0'));
     }
 
     public function shop()
     {
-        return view('Font_end.content.shop');
+        $FeaturedRecent1 = ProductModel::WHERE('FeaturedRecent',1)->get();
+
+        return view('Font_end.content.shop', compact('FeaturedRecent1'));
     }
 
-    public function shopdetail()
+    public function shopdetail(Request $request)
     {
-        return view('Font_end.content.shopdetail');
+        $ProductDetail = ProductModel::WHERE('pID',$request->id)->first();
+
+        $FeaturedRecent1 = ProductModel::WHERE('FeaturedRecent',1)->get();
+
+        return view('Font_end.content.shopdetail', compact('FeaturedRecent1','ProductDetail'));
     }
 
     public function shoppingcart()
