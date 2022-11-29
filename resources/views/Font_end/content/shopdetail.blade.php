@@ -54,7 +54,7 @@
                             <i class="fas fa-heart text-primary"></i>
                             <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
                         </a>
-                        <a href="" class="btn px-0 ml-3">
+                        <a href="{{asset('client/contents/shoppingcart/')}}" class="btn px-0 ml-3">
                             <i class="fas fa-shopping-cart text-primary"></i>
                             <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
                         </a>
@@ -88,7 +88,7 @@
             <div id="product-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner bg-light">
                     <div class="carousel-item active">
-                        <img class="w-100 h-100" src="img/" alt="Image">
+                        <img class="w-100 h-100" src="img/{{$ProductDetail->pImage}}" alt="Image">
                     </div>
                     {{-- <div class="carousel-item">
                         <img class="w-100 h-100" src="img/product-2.jpg" alt="Image">
@@ -111,7 +111,7 @@
 
         <div class="col-lg-7 h-auto mb-30">
             <div class="h-100 bg-light p-30">
-                <h3></h3>
+                <h3>{{$ProductDetail->pName}}</h3>
                 <div class="d-flex mb-3">
                     <div class="text-primary mr-2">
                         <small class="fas fa-star"></small>
@@ -122,8 +122,9 @@
                     </div>
                     <small class="pt-1">(99 Reviews)</small>
                 </div>
-                <h3 class="font-weight-semi-bold mb-4">$</h3>
-                <p class="mb-4"></p>
+                <h4 class="text-muted ml-2"><del>${{$ProductDetail->pPricePro}}</del></h4>
+                <h3 class="font-weight-semi-bold mb-4">&nbsp${{$ProductDetail->pPrice}}</h3>
+                <p class="mb-4">Description: {{$ProductDetail->pDescription}}</p>
                 {{-- <div class="d-flex mb-3">
                     <strong class="text-dark mr-3">Sizes:</strong>
                     <form>
