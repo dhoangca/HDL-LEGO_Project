@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class LoginAndRegisterModel extends Authenticatable
 {
     use HasFactory;
-    // public $table ="users";
+
     // public $primaryKey = 'uID';
     // public $fillable = 
     // [
