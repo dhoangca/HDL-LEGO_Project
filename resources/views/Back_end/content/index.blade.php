@@ -12,7 +12,7 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Chào mừng Admin của HDL - LEGO</h1>
+            <h1 class="mt-4">Welcome to HDL - LEGO ADMINISTRATOR</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">Manager</li>
             </ol>
