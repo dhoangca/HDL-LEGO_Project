@@ -1,4 +1,4 @@
-{{-- <!-- head --> 
+<!-- head --> 
 @include('Back_end.layout.head')
 
 <!-- nav --> 
@@ -60,4 +60,4 @@
 @include('Back_end.layout.footer')
 
 <!-- js -->
-@include('Back_end.layout.js') --}}
+@include('Back_end.layout.js')
