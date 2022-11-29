@@ -42,4 +42,13 @@ class ClientController extends Controller
     {
         return view('Font_end.content.checkout');
     }
+
+    public function search(Request $request)
+    {
+        $ProductSearch = ProductModel::WHERE('pName','like','%'.$request->key.'%')
+                                        ->orWhere('pPrice',$request->key)
+                                        ->get();
+
+        return view('Font_end.content.search', compact('ProductSearch'));
+    }
 }
