@@ -1,10 +1,10 @@
 <!-- head --> 
-@include('Back_end.layout.head')
+{{-- @include('Back_end.layout.head')
 
 <!-- nav --> 
 @include('Back_end.layout.nav')
 
-<div id="layoutSidenav">
+<div id="layoutSidenav"> --}}
 
 <!-- sidebar -->
 @include('Back_end.layout.sidebar')
@@ -13,7 +13,7 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Manage Category</h1>
+            {{-- <h1 class="mt-4">Manage Category</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">Add Category</li>
             </ol>
@@ -44,4 +44,4 @@
 @include('Back_end.layout.footer')
 
 <!-- js -->
-@include('Back_end.layout.js')
+@include('Back_end.layout.js') --}}
