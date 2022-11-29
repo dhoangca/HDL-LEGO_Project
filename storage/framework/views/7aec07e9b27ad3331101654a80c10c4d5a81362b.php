@@ -34,11 +34,11 @@
                     <div class="navbar-nav mr-auto py-0">
                         <a href="<?php echo e(route('clients.index')); ?>" class="nav-item nav-link active">Home</a>
                         <a href="<?php echo e(route('clients.shop')); ?>" class="nav-item nav-link">Shop</a>
-                        <a href="<?php echo e(route('clients.shopdetail')); ?>" class="nav-item nav-link">Shop Detail</a>
+                        <a href="<?php echo e(asset('client/contents/shopdetail/')); ?>" class="nav-item nav-link">Shop Detail</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="<?php echo e(route('clients.shoppingcart')); ?>" class="dropdown-item">Shopping Cart</a>
+                                <a href="<?php echo e(asset('client/contents/shoppingcart/')); ?>" class="dropdown-item">Shopping Cart</a>
                                 <a href="<?php echo e(route('clients.checkout')); ?>" class="dropdown-item">Checkout</a>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                             <i class="fas fa-heart text-primary"></i>
                             <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
                         </a>
-                        <a href="" class="btn px-0 ml-3">
+                        <a href="<?php echo e(asset('client/contents/shoppingcart/')); ?>" class="btn px-0 ml-3">
                             <i class="fas fa-shopping-cart text-primary"></i>
                             <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
                         </a>
@@ -59,4 +59,5 @@
         </div>
     </div>
 </div>
-<!-- Navbar End --><?php /**PATH C:\xampp\htdocs\HDL-LEGO_Project_Duc\resources\views/Font_end/layout/navbar.blade.php ENDPATH**/ ?>
+<!-- Navbar End -->
+<?php /**PATH C:\xampp\htdocs\HDL-LEGO_Project_Duc\resources\views/Font_end/layout/navbar.blade.php ENDPATH**/ ?>
