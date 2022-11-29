@@ -69,6 +69,7 @@ class LoginAndRegisterController extends Controller
     }
     public function getLogout()
     {
+        Auth::logout();
         return redirect()->intended('clients.login');
     }
 
