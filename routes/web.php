@@ -103,5 +103,10 @@ Route::prefix('admin')->name('admin.')->group(function()
     
 });
 
+<<<<<<< HEAD
+
+// end route back-end
+=======
 Route::get('shopcheckout', [ClientController::class, 'checkout'])->name('checkout');
 // end route back-end
+>>>>>>> 193e32db5702bd6af6c34f84ec0aba481d89ecf4
