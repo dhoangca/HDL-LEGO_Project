@@ -334,14 +334,14 @@
                                 <td>2010/03/11</td>
                                 <td>$850,000</td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <td>Shou Itou</td>
                                 <td>Regional Marketing</td>
                                 <td>Tokyo</td>
                                 <td>20</td>
                                 <td>2011/08/14</td>
                                 <td>$163,000</td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>
