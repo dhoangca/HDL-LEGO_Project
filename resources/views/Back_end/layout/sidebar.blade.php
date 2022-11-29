@@ -73,10 +73,10 @@
                 </a>
                 <div class="collapse" id="pagesmanageproduct" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="login.html">Manage Products</a>
+                        <a class="nav-link" href="{{route('admin.manageproduct')}}">Manage Products</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{route('admin.tableproduct')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Tables
                 </a>
