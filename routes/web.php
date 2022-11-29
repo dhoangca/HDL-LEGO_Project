@@ -6,6 +6,8 @@ use App\Http\Controllers\Back_end\AdminController;
 use App\Http\Controllers\Back_end\CategoryController;
 use App\Http\Controllers\Back_end\UsersController;
 use App\Http\Controllers\Font_end\LoginAndRegisterController;
+use App\Http\Controllers\Back_end\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +32,7 @@ Route::prefix('client')->name('clients.')->group(function()
 
         Route::get('shops',[ClientController::class,'shop'])->name('shop');
 
-        Route::get('shopdetail',[ClientController::class,'shopdetail'])->name('shopdetail');
+        Route::get('shopdetail/{id}',[ClientController::class,'shopdetail'])->name('shopdetail');
 
         Route::get('shoppingcart',[ClientController::class,'shoppingcart'])->name('shoppingcart');
 
@@ -40,13 +42,13 @@ Route::prefix('client')->name('clients.')->group(function()
     // route login and register
     Route::group(['prefix' =>'sign'], function()
     {
-        Route::get('login/',[LoginAndRegisterController::class, 'getLogin'])->name('login');
+        Route::get('login/',[LoginAndRegisterController::class,'getLogin'])->name('login');
             
-        Route::post('login/',[LoginAndRegisterController::class, 'postLogin']);
+        Route::post('login/',[LoginAndRegisterController::class,'postLogin'])->name('postLogin');
 
-        Route::get('register/',[LoginAndRegisterController::class, 'getRegister'])->name('register');
+        Route::get('register/',[LoginAndRegisterController::class,'getRegister'])->name('register');
 
-        Route::post('register/',[LoginAndRegisterController::class, 'postRegister']);
+        Route::post('register/',[LoginAndRegisterController::class,'postRegister']);
             
     });
 });
@@ -84,9 +86,9 @@ Route::prefix('admin')->name('admin.')->group(function()
     // group route của users
     Route::group(['prefix' =>'users'], function()
     {
-        // route của trang quản lý category
+        // route của trang quản lý users
         Route::get('/manageusers',[UsersController::class,'manageusers'])->name('manageusers');
-        // route của trang bảng category
+        // route của trang bảng users
         Route::get('/tableusers',[UsersController::class,'tableusers'])->name('tableusers');
             
         Route::get('create/',[UsersController::class,'getCreate'])->name('create');
@@ -100,13 +102,24 @@ Route::prefix('admin')->name('admin.')->group(function()
         Route::get('delete/{id}',[UsersController::class,'delete']);      
     });
 
-    
+    // route của trang quản lý sản phẩm
+    Route::group(['prefix' =>'product'], function()
+    {
+        // route của trang quản lý sản phẩm
+        Route::get('/manageproduct',[ProductController::class,'manageproduct'])->name('manageproduct');
+        // route của trang bảng sản phẩm
+        Route::get('/tableproduct',[ProductController::class,'tableproduct'])->name('tableproduct');
+            
+        Route::get('create/',[ProductController::class,'getCreate'])->name('create');
+            
+        Route::post('create/',[ProductController::class,'postCreate']);
+            
+        Route::get('edit/{id}',[ProductController::class,'getEditCate']);
+
+        Route::post('edit/{id}',[ProductController::class,'postEditCate']);
+            
+        Route::get('delete/{id}',[ProductController::class,'delete']);      
+    });
 });
 
-<<<<<<< HEAD
-
 // end route back-end
-=======
-Route::get('shopcheckout', [ClientController::class, 'checkout'])->name('checkout');
-// end route back-end
->>>>>>> 193e32db5702bd6af6c34f84ec0aba481d89ecf4
