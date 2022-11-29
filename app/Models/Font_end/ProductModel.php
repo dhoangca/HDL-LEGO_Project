@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ProductModel extends Model
 {
     use HasFactory;
-    public $table ="category";
-    public $primaryKey = 'CategoryID';
+    public $table ="product";
+    public $primaryKey = 'pID';
     public $fillable = 
     [
-        'CategoryName', 'CategoryDescription',
+        'pName', 'pDescription','pImage','pPrice','pQuantity','FeaturedRecent'
     ];
     public $timestamps = false;
 }

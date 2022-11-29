@@ -23,15 +23,19 @@ use App\Http\Controllers\Font_end\LoginAndRegisterController;
 // start route font-end
 Route::prefix('client')->name('clients.')->group(function()
 {
-    Route::get('/', [ClientController::class, 'index'])->name('index');
+    // route các trang contents front end
+    Route::group(['prefix' =>'contents'], function()
+    {
+        Route::get('/',[ClientController::class,'index'])->name('index');
 
-    Route::get('shops', [ClientController::class, 'shop'])->name('shop');
+        Route::get('shops',[ClientController::class,'shop'])->name('shop');
 
-    Route::get('shopdetail', [ClientController::class, 'shopdetail'])->name('shopdetail');
+        Route::get('shopdetail',[ClientController::class,'shopdetail'])->name('shopdetail');
 
-    Route::get('shoppingcart', [ClientController::class, 'shoppingcart'])->name('shoppingcart');
+        Route::get('shoppingcart',[ClientController::class,'shoppingcart'])->name('shoppingcart');
 
-    Route::get('shopcheckout', [ClientController::class, 'checkout'])->name('checkout');
+        Route::get('shopcheckout',[ClientController::class,'checkout'])->name('checkout');
+    });
 
     // route login and register
     Route::group(['prefix' =>'sign'], function()
@@ -99,5 +103,10 @@ Route::prefix('admin')->name('admin.')->group(function()
     
 });
 
+<<<<<<< HEAD
 
 // end route back-end
+=======
+Route::get('shopcheckout', [ClientController::class, 'checkout'])->name('checkout');
+// end route back-end
+>>>>>>> 193e32db5702bd6af6c34f84ec0aba481d89ecf4
