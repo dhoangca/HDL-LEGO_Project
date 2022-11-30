@@ -37,6 +37,8 @@ Route::prefix('client')->name('clients.')->group(function()
         Route::get('shoppingcart',[ClientController::class,'shoppingcart'])->name('shoppingcart');
 
         Route::get('shopcheckout',[ClientController::class,'checkout'])->name('checkout');
+
+        Route::get('search',[ClientController::class,'search'])->name('search');
     });
 
     // route login and register

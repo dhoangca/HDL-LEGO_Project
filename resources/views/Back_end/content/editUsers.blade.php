@@ -49,6 +49,7 @@
                 <button type="submit" class="btn btn-info"> Edit </button>
                 <button type="reset" class="btn btn-primary">Reset Button</button>
                 <a href="{{route('admin.manageusers')}}" class="btn btn-warning">Back</a>
+                {{-- Checked and edited by duc --}}
             </form>
         </div>
     </main>
