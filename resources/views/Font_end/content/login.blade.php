@@ -20,7 +20,7 @@
 				<img src="login-register/images/347287.jpg" alt="">
 			</div>
 			<div class="form-inner">
-				<form role="form" action="" method="POST">
+				<form action="{{route('clients.postLogin')}}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-header">
 						<h3>Login</h3>
