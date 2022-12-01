@@ -40,7 +40,7 @@
 					</div>
 					<div class="form-group" >
 						<label for="">Password:</label>
-						<input type="password" class="form-control" name="uPassword" data-validation="length" data-validation-length="min8">
+						<input type="password" class="form-control" name="uPassword" data-validation="length" data-validation-length="min5">
 					</div>
 					<div class="form-group" >
 						<label for="">Phone Number:</label>
