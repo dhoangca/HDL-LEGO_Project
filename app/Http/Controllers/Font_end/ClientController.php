@@ -33,16 +33,6 @@ class ClientController extends Controller
         return view('Font_end.content.shopdetail', compact('FeaturedRecent1','ProductDetail'));
     }
 
-    public function shoppingcart()
-    {
-        return view('Font_end.content.shoppingcart');
-    }
-
-    public function checkout()
-    {
-        return view('Font_end.content.checkout');
-    }
-
     public function search(Request $request)
     {
         $ProductSearch = ProductModel::WHERE('pName','like','%'.$request->key.'%')

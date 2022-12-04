@@ -7,6 +7,9 @@ use App\Http\Controllers\Back_end\CategoryController;
 use App\Http\Controllers\Back_end\UsersController;
 use App\Http\Controllers\Font_end\LoginAndRegisterController;
 use App\Http\Controllers\Back_end\ProductController;
+use App\Http\Controllers\Font_end\UsersControllerFrontEnd;
+use App\Http\Controllers\Font_end\CartController;
+
 
 
 /*
@@ -34,9 +37,9 @@ Route::prefix('client')->name('clients.')->group(function()
 
         Route::get('shopdetail/{id}',[ClientController::class,'shopdetail'])->name('shopdetail');
 
-        Route::get('shoppingcart',[ClientController::class,'shoppingcart'])->name('shoppingcart');
+        Route::get('shoppingcart',[UsersControllerFrontEnd::class,'shoppingcart'])->name('shoppingcart');
 
-        Route::get('shopcheckout',[ClientController::class,'checkout'])->name('checkout');
+        Route::get('shopcheckout',[UsersControllerFrontEnd::class,'checkout'])->name('checkout');
 
         Route::get('search',[ClientController::class,'search'])->name('search');
     });
@@ -51,6 +54,19 @@ Route::prefix('client')->name('clients.')->group(function()
         Route::get('register/',[LoginAndRegisterController::class,'getRegister'])->name('register');
 
         Route::post('register/',[LoginAndRegisterController::class,'postRegister']);
+            
+    });
+
+    // route add to cart
+    Route::group(['prefix' =>'cart'], function()
+    {
+        Route::get('ShoppingCart/',[CartController::class,'cart'])->name('cart');
+            
+        Route::get('add-to-cart/{id}',[CartController::class,'addtocart'])->name('addtocart');
+
+        Route::post('/update-cart/{id}',[CartController::class,'updatecart'])->name('updatecart');
+
+        Route::delete('deletecart/{id}',[CartController::class,'delete']);
             
     });
 });
