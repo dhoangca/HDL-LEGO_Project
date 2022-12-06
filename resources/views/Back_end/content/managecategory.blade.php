@@ -13,9 +13,9 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">DASHBOARD</h1>
+            <h1 class="mt-4">Manager</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">DASHBOARD</li>
+                <li class="breadcrumb-item active">Manager Category</li>
             </ol>
             <div class="card mb-4">
                 <div class="card-header">
