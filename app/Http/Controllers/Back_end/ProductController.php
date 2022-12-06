@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Back_end;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Back_end\ProductModel;
+use DB;
 
 class ProductController extends Controller
 {
@@ -58,7 +60,11 @@ class ProductController extends Controller
 
         $product->pPrice = $request->pPrice;
 
+        $product->pPricePro = $request->pPricePro;
+
         $product->pQuantity = $request->pQuantity;
+        
+        $product->FeaturedRecent = $request->FeaturedRecent;
 
         $product->cID = $request->cID;
 
@@ -72,8 +78,12 @@ class ProductController extends Controller
     {
 
         $data['cate'] = ProductModel::find($pID);
+        
+        $countries = DB::table('country')->get();
 
-        return view('Back_end.content.editProduct',$data);
+        $categories = DB::table('category')->get();
+
+        return view('Back_end.content.editProduct',$data, compact("countries", "categories"));
 
     }
 
@@ -90,6 +100,8 @@ class ProductController extends Controller
 
         $product->pPrice = $request->pPrice;
 
+        $product->pPricePro = $request->pPricePro;
+
         $product->pQuantity = $request->pQuantity;
 
         $product->cID = $request->cID;
@@ -100,12 +112,12 @@ class ProductController extends Controller
 
     }
 
-    public function delete($id)
+    public function delete($pID)
     {
 
-        $category = ProductModel::find($id);
+        $product = ProductModel::find($pID);
 
-        $category->delete();
+        $product->delete();
 
         return back();
     } 
