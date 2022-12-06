@@ -26,7 +26,7 @@
                     <table id="datatablesSimple">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>User Name</th>
                                 <th>Email</th>
@@ -36,7 +36,7 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>User Name</th>
                                 <th>Email</th>
