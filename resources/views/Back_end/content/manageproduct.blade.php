@@ -13,9 +13,9 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Dashboard</h1>
+            <h1 class="mt-4">Manager</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active">Manager Products</li>
             </ol>
             <div class="card mb-4">
                 <div class="card-header">
@@ -26,11 +26,12 @@
                     <table id="datatablesSimple">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>STT</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Price</th>
+                                <th>Price Pro</th>
                                 <th>Quantity</th>
                                 
 
@@ -38,11 +39,12 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>ID</th>
+                                <th>STT</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Price</th>
+                                <th>Price Pro</th>
                                 <th>Quantity</th>
                                
                             </tr>
@@ -55,6 +57,7 @@
                                     <td>{{ $value->pDescription}}</td>
                                     <td><img src="img/{{ $value->pImage}}" style ="width: 100px;"></td>                 
                                     <td>{{ $value->pPrice}}</td>
+                                    <td>{{ $value->pPricePro}}</td>
                                     <td>{{ $value->pQuantity}}</td>
                                         
 
