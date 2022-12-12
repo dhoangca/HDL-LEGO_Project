@@ -12,7 +12,7 @@
         <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
+                    <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account </button>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="<?php echo e(route('clients.login')); ?>" style="text-decoration: none"><button class="dropdown-item" type="button">Sign in</button></a>
                         <a href="<?php echo e(route('clients.register')); ?>" style="text-decoration: none"><button class="dropdown-item" type="button">Sign up</button></a>
@@ -55,13 +55,14 @@
             </a>
         </div>
         <div class="col-lg-4 col-6 text-left">
-            <form action="">
+            <form role="search" method="get"  action="<?php echo e(asset('client/contents/search/')); ?>">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products">
+                    <input type="text" name="key" class="form-control" name="" placeholder="Search for products">
                     <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-primary">
-                            <i class="fa fa-search"></i>
-                        </span>
+                        <button type="submit" class="input-group-text bg-transparent text-primary">
+                            <i class="fa fa-search"></i>   
+                        </button>
+                        
                     </div>
                 </div>
             </form>
@@ -72,4 +73,5 @@
         </div>
     </div>
 </div>
-<!-- Topbar End --><?php /**PATH C:\xampp\htdocs\HDL-LEGO_Project_Luong\resources\views/Font_end/layout/topbar.blade.php ENDPATH**/ ?>
+<!-- Topbar End -->
+<?php /**PATH C:\xampp\htdocs\HDL-LEGO_Project_Luong\resources\views/Font_end/layout/topbar.blade.php ENDPATH**/ ?>
