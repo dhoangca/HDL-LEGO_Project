@@ -8,7 +8,7 @@ use DB;
 
 class CategoryModel extends Model
 {
-    // cau lenh ket noi vơi database
+    // 
     use HasFactory;
     public $table ="category";
     public $primaryKey = 'CategoryID';
