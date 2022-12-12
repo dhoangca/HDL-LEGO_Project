@@ -26,14 +26,14 @@
                     <table id="datatablesSimple">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Action</th>
