@@ -26,7 +26,7 @@
                     <table id="datatablesSimple">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Image</th>
@@ -39,7 +39,7 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Image</th>
